@@ -2,24 +2,29 @@
 	background-image: url("../../../assets/img/modal_back.png");
 	background-size: 100% 100%;
 	background-repeat: no-repeat;
-	position: relative; // CRUCIAL: Must be relative for the button to be positioned absolutely inside it.
+	position: relative; // CRITICAL: Enables absolute positioning
 	height: 100%;
 	display: grid;
 	align-items: center;
 
-    // --- ADDED STYLES FOR TOP-RIGHT BUTTON ---
+    /* --- STYLES FOR CONNECT BUTTON (TOP-RIGHT CORNER) --- */
     
     // 1. Positioning Container
     .top-right-wallet-container {
         position: absolute;
-        top: 2vw; // Adjust vertical position
-        right: 2vw; // Adjust horizontal position
-        z-index: 10; // Ensure it renders above the main game select container
+        top: 2vw; 
+        right: 2vw; 
+        z-index: 10;
     }
     
-    // 2. Button Visual Styling (Reusing styles from Connect.scss)
+    // 2. Button Visual Styling (Provides size, background, and font)
     .connect-wallet-button {
-        // Button background image and visual effects
+        // CRITICAL: Size and alignment for visibility
+        width: 15vw; 
+        height: 4vw;
+        font-size: 1.5vw;
+        
+        // Visuals
         background-image: url("../../../assets/img/victory_button.png");
         background-repeat: no-repeat;
         background-size: 100% 100%;
@@ -27,11 +32,7 @@
         font-family: "HaettenschweilerRegular", fantasy, Courier, monospace;
         color: #fbfae2;
         
-        // Size and alignment for the top-right corner
-        width: 15vw; // Adjusted for a smaller, corner element
-        height: 4vw;
-        font-size: 1.5vw;
-        
+        // Alignment
         display: grid;
         text-align: center;
         align-items: center;
@@ -41,7 +42,71 @@
             font-size: 1.45vw;
         }
     }
-    // ----------------------------------------
+    /* --------------------------------------------------- */
 
 	.u-container {
-        // ... existing .u-container styles
+		position: relative;
+		width: 70vw;
+		height: calc(70vw * 0.6);
+		top: 1vw;
+		margin: auto;
+		background-image: url("../../../assets/img/level_back.png");
+		background-repeat: no-repeat;
+		background-size: 100% 100%;
+		text-align: center;
+		vertical-align: middle;
+
+		.u-content {
+			position: relative;
+			width: 50vw;
+			height: calc(50vw * 0.6);
+		}
+		.u-ribbon {
+			position: absolute;
+			width: 60%;
+			height: 6vw;
+			left: 20%;
+			top: -2.5vw;
+			background-image: url("../../../assets/img/ribbon.png");
+			background-repeat: no-repeat;
+			background-size: 100% 100%;
+			font-size: 3vw;
+			text-align: center;
+			font-family: "HaettenschweilerRegular", fantasy, Courier, monospace;
+			color: #fbfae2;
+			-webkit-text-stroke: 0.05em #792a4d;
+		}
+		.u-content {
+			position: absolute;
+			bottom: 0;
+			width: 100%;
+			height: calc(70vw * 0.6 - 3vw);
+			display: flex;
+			justify-content: space-around;
+            
+            .u-item {
+                position: relative;
+                width: 30%;
+                margin: auto;
+                cursor: pointer;
+                
+                .u-item-image {
+                    width: 100%;
+                    height: auto;
+                }
+                
+                .u-item-text {
+                    position: absolute;
+                    width: 100%;
+                    text-align: center;
+                    left: 0;
+                    bottom: 0;
+                    font-size: 1.5vw;
+                    font-family: "HaettenschweilerRegular";
+                    color: #f9f8cb;
+                    -webkit-text-stroke: 0.05em #0c6c6d;
+                }
+            }
+		}
+	}
+}
