@@ -17,14 +17,12 @@
         z-index: 10;
     }
     
-    // 2. Button Visual Styling (Provides size, background, and font)
+    // 2. Button Visual Styling
     .connect-wallet-button {
-        // CRITICAL: Size and alignment for visibility
         width: 15vw; 
         height: 4vw;
         font-size: 1.5vw;
         
-        // Visuals
         background-image: url("../../../assets/img/victory_button.png");
         background-repeat: no-repeat;
         background-size: 100% 100%;
@@ -32,7 +30,6 @@
         font-family: "HaettenschweilerRegular", fantasy, Courier, monospace;
         color: #fbfae2;
         
-        // Alignment
         display: grid;
         text-align: center;
         align-items: center;

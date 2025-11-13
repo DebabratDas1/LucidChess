@@ -7,7 +7,10 @@ import FriendPlay from "./views/FriendPlay";
 import GameScene from "./views/GameScene";
 import MatchPlay from "./views/MatchPlay";
 import Orientation from "./components/UI/Orientation/Orientation";
-import Connect from "./components/UI/Connect/Connect";
+
+// FINAL FIX: Using lowercase folder 'connect' and file 'Connect'
+import Connect from "./components/UI/connect/Connect.js"; 
+
 import Ranking from "./components/UI/Ranking/Ranking";
 
 function App() {

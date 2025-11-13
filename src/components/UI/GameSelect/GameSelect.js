@@ -9,16 +9,14 @@ import mode3Img from "../../../assets/img/select_game_computer.png";
 import song from "../../../assets/audio/gameselect.mp3";
 import useSound from "use-sound";
 
-// CORRECTED PATH: Up one level (..) then down to UI/connect/
-import { ConnectButton } from "../UI/connect/ConnectButton"; 
+// FINAL FIX: Import the component named 'Connect' and alias it as 'ConnectButton'
+import { Connect as ConnectButton } from "../connect/Connect.js"; 
 
 export const GameSelect = () => {
   const [playSong] = useSound(song);
   const navigate = useNavigate();
-  // State to track the connected wallet
   const [walletAddress, setWalletAddress] = useState(""); 
   
-  // Callback function to update state when wallet connects
   const handleWalletConnected = (address) => {
       setWalletAddress(address);
   }
@@ -42,7 +40,8 @@ export const GameSelect = () => {
     <div className="GameSelect">
       {/* Container for top-right positioning */}
       <div className="top-right-wallet-container"> 
-        <ConnectButton onWalletChange={handleWalletConnected} />
+        {/* The tag name remains correct due to the alias above */}
+        <ConnectButton onWalletChange={handleWalletConnected} /> 
       </div>
       
       <div className="u-container">
